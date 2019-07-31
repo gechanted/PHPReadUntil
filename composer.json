@@ -1,0 +1,13 @@
+{
+  "name" : "gechanted/read-until",
+  "description" : "",
+
+  "require": {},
+
+  "autoload" :
+  {
+    "psr-4"     : {
+      "ReadUntil\\" : ["src"]
+    }
+  }
+}
