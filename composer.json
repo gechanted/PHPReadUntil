@@ -1,8 +1,13 @@
 {
   "name" : "gechanted/read-until",
-  "description" : "",
+  "description" : "Two Simple Reader for exploding with multiple delimiters, great for parsing",
+  "keywords": ["parse", "parser", "parsing"],
+  "homepage": "https://github.com/gechanted/PHPReadUntil",
+  "license": "MIT",
 
-  "require": {},
+  "require": {
+    "php": "7.0"
+  },
 
   "autoload" :
   {
