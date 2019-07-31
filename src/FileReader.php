@@ -1,6 +1,8 @@
 <?php
 namespace ReadUntil;
 
+use RuntimeException;
+
 class FileReader implements ReaderInterface
 {
     private $handle;
@@ -12,7 +14,7 @@ class FileReader implements ReaderInterface
     public function __construct($stream)
     {
         if (is_resource($stream) === false) {
-            throw new \RuntimeException('Argument is not a valid stream');
+            throw new RuntimeException('Argument is not a valid stream');
         }
         $this->handle = $stream;
     }

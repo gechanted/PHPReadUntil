@@ -55,7 +55,11 @@ class StringReader implements ReaderInterface
         return $this->text;
     }
 
-    public function setHandle(string $handle): void
+    /**
+     * @param string $handle
+     * @return void
+     */
+    public function setHandle(string $handle)
     {
         $this->text = $handle;
     }
