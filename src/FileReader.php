@@ -30,6 +30,9 @@ class FileReader implements ReaderInterface
 
             for ($index = 0; $index < $delimiterCount; $index++) {
                 $currentDelimiter = $delimiters[$index];
+                if ($currentDelimiter === '') {
+                    return new ReadResult(stream_get_contents($this->handle), '');
+                }
 
                 $delimiterLength = strlen($currentDelimiter);
                 for ($delimiterChar = 0; $delimiterChar < $delimiterLength; $delimiterChar++) {

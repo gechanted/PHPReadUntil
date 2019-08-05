@@ -30,6 +30,9 @@ class StringReader implements ReaderInterface
 
             for ($index = 0; $index < $delimiterCount; $index++) {
                 $currentDelimiter = $delimiters[$index];
+                if ($currentDelimiter === '') {
+                    return new ReadResult($this->text, '');
+                }
 
                 $delimiterLength = strlen($currentDelimiter);
                 for ($delimiterChar = 0; $delimiterChar < $delimiterLength; $delimiterChar++) {
@@ -44,7 +47,9 @@ class StringReader implements ReaderInterface
                 return new ReadResult($textExcerpt, $currentDelimiter);
             }
         }
-        return new ReadResult($this->text, '');
+        $text = $this->text;
+        $this->text = '';
+        return new ReadResult($text, '');
     }
 
     /**

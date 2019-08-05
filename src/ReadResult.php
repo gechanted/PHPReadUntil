@@ -6,11 +6,11 @@ class ReadResult
     /**
      * @var string
      */
-    private $text;
+    public $text;
     /**
      * @var string
      */
-    private $delimiter;
+    public $delimiter;
 
     public function __construct(string $text, string $delimiter)
     {
