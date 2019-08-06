@@ -4,9 +4,10 @@
   "keywords": ["parse", "parser", "parsing"],
   "homepage": "https://github.com/gechanted/PHPReadUntil",
   "license": "MIT",
+  "version": "1.0",
 
   "require": {
-    "php": "7.0"
+    "php": "7.2.6"
   },
 
   "autoload" :
