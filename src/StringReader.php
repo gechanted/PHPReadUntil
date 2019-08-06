@@ -31,7 +31,9 @@ class StringReader implements ReaderInterface
             for ($index = 0; $index < $delimiterCount; $index++) {
                 $currentDelimiter = $delimiters[$index];
                 if ($currentDelimiter === '') {
-                    return new ReadResult($this->text, '');
+                    $text = $this->text;
+                    $this->text = '';
+                    return new ReadResult($text, '');
                 }
 
                 $delimiterLength = strlen($currentDelimiter);

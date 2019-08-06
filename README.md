@@ -17,7 +17,7 @@ $firstResult = $stringReader->readUntil(['-', 'ing']);
 echo "string '". $firstResult->getText() ."' extracted by the delimiter '". $firstResult->getDelimiter(). "'" . PHP_EOL;
 
 while (true) {
-    $result = $stringReader->readUntil(['.', 'i']);
+    $result = $stringReader->readUntil(['.', 'i', 'ing']);
     echo "string '". $result->getText() ."' extracted by the delimiter '". $result->getDelimiter(). "'" . PHP_EOL;
     if ( $result->getDelimiter() === '') {
         break;
